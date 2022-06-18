@@ -1,6 +1,25 @@
 # git-quizzy
 A fun JavaScript coding quiz game! Let's Git Quizzy!
 
+## Purpose:
+Nothing yet!
+
+<br>
+<div align="left">
+    <img src="./assets/images/git-quizzy-screenshot.jpg" width="800px" /> 
+</div>
+<br>
+
+## Website Link:
+https://dronetdevdesign.github.io/git-quizzy/
+
+## This Website Created Using:
+* Javascript
+* HTML
+* CSS
+
+## Contribution:
+Ron Dronet - Full-stack Developer and Graphic Designer
 
 ## User story:
 AS A coding boot camp student
