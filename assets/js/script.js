@@ -10,3 +10,19 @@
 // THEN the game is over
 // WHEN the game is over
 // THEN I can save my initials and score
+
+var userScore = 0;
+var timer = 100000;
+var startQuizBtn = document.querySelector("#start-quiz");
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+startQuizBtn.addEventListener("click", writePassword);
