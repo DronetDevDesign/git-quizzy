@@ -1,9 +1,11 @@
 :root {
     --background: #f7f7f7;
-    --med-pink: #ad7afe;
+    --pale-purple: #a168fc;
+    --lt-purple: #6935eb;
     --med-purple: #4e28ae;
     --drk-purple: #351c75;
     --drk-gray: #181818;
+    --red-timer-button: #e00000;
 }
 
 *,
@@ -12,8 +14,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -22,13 +23,41 @@ body {
 body {
   font-family: sans-serif;
   background-color: var(--background);
+  overscroll-behavior: none;
+  /* overflow: hidden; */
 }
 
 a {
   text-decoration: none;
 }
 
+.main-container {
+  max-width: 70%;
+  margin: auto;
+  justify-content:center;
+  top: 0;
+}
+
+header {
+  width: 65%;
+  background-color: var(--background);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 45px 65px 45px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: hsl(206, 17%, 28%);
+  z-index: 1000;
+}
+
 .wrapper {
+  position: relative;
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
@@ -38,20 +67,11 @@ a {
   /* text-align: center; */
 }
 
-header {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content:space-between;
-  margin-bottom: 50px;
-  color: hsl(206, 17%, 28%);
-}
-
 .git-quizzy-heading {
   position: relative;
   font-size: 85px;
-  background-color: #ffffff;
-  background-image: linear-gradient(var(--med-pink), var(--med-pink), var(--med-purple), var(--drk-purple));
+  background-color: var(--background);
+  background-image: linear-gradient(var(--pale-purple), var(--pale-purple), var(--med-purple), var(--drk-purple));
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -61,8 +81,8 @@ header {
 }
 
 #git {
-  background-color: #ffffff;
-  background-image: linear-gradient(var(--drk-purple), var(--drk-purple));
+  background-color: var(--background);
+  background-image: linear-gradient(var(--lt-purple), var(--drk-purple));
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -74,18 +94,18 @@ header {
 header a > p {
   font-size: 16px;
   font-weight: bold;
-  color: var(--med-pink);
+  color: var(--pale-purple);
 }
 
 header #timer-text {
-  background-image: linear-gradient(var(--med-pink), var(--drk-purple));
+  background-image: linear-gradient(var(--pale-purple), var(--drk-purple));
   min-width: 130px;
   height: 40px;
   padding: 12px 24px;
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  color: white;
+  color: var(--background);
   border-radius: 50px;
   letter-spacing: 1px;
 }
@@ -99,9 +119,10 @@ main {
   margin-bottom: 125px;
 }
 
-main .slide-titles {
-  font-size: 40px;
+main #slide-titles {
+  font-size: 36px;
   color: var(--drk-purple);
+  letter-spacing: 0.1px;
 }
 
 main p {
@@ -111,108 +132,76 @@ main p {
   color: var(--drk-gray);
 }
 
-#buttons .btn {
+li {
+  list-style: none;
+}
+
+ul #start-quiz li {
+  padding: 0;
+}
+
+#start-quiz-btn {
+  margin: auto;
+  justify-content: center;
+  text-align: center;
   padding: 15px 30px;
   font-size: 22px;
   cursor: pointer;
   background-color: var(--drk-purple);
-  color: white;
+  color: var(--background);
   border-radius: 8px;
   border: none;
 }
 
-#buttons .btn:hover {
-  background-image: linear-gradient(var(--med-pink), var(--drk-purple));
+#start-quiz-btn:hover {
+  background-image: linear-gradient(var(--pale-purple), var(--drk-purple));
 }
 
-/* .card {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
-  border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
-  font-size: 18px;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 30px 40px;
+#section {
+  margin: 100px 25px;
 }
 
-.card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
+#quiz-titles {
+  position: relative;
+  font-size: 36px;
+  color: var(--drk-purple);
+  letter-spacing: 0.1px;
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
-.card-body {
-  min-height: 100px;
+#choice-buttons-one a {
+  justify-content: left;
+  text-align: left;
 }
 
-.card-footer {
-  text-align: center;
-}
-
-.card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-}
-
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.btn {
-  border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
-  color: hsl(0, 0%, 100%);
-  display: inline-block;
+#choice-buttons-one li,
+#choice-buttons-two li,
+#choice-buttons-three li,
+#choice-buttons-four li,
+#choice-buttons-five li {
+  width: 275px;
+  padding: 15px 30px;
+  margin-bottom: 25px;
   font-size: 22px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
   cursor: pointer;
-}
-
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-}
-
-.float-right {
-  float: right;
-}
-
-#password {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  background-color: var(--drk-purple);
+  color: var(--background);
+  border-radius: 8px;
   border: none;
-  display: block;
-  width: 100%;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 85px;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
-  border-radius: 6px;
-  resize: none;
-  overflow: hidden;
+  text-align: left;
 }
 
-@media (max-width: 690px) {
+#choice-buttons-one li:hover,
+#choice-buttons-two li:hover,
+#choice-buttons-three li:hover,
+#choice-buttons-four li:hover,
+#choice-buttons-five li:hover {
+  background-image: linear-gradient(var(--pale-purple), var(--drk-purple));
+}
+
+/* @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
@@ -228,4 +217,4 @@ button[disabled] {
   .btn {
     font-size: 0.8rem;
   }
-} */
+}  */
