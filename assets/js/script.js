@@ -12,76 +12,91 @@
 // THEN I can save my initials and score
 
 var userScore = 0;
-var timerStartNumber = 100;
-var startQuizBtn = document.querySelector("#start-quiz");
-
-// variable objects containing quiz questions and possible answers:
-var quizQuestionOne = {
-    askOne: "Commonly used data types DO not include:",
-    answersOne: [
-      "strings",
-      "booleans",
-      "alerts",
-      "numbers",
-    ],
-};
-// console.log(quizQuestionOne);
-
-var quizQuestionTwo = {
-    askTwo: "The condition in an if / else statement is enclosed with _______.",
-    answersTwo: [
-      "quotes",
-      "curly brackets",
-      "parenthesis",
-      "square brackets",
-    ],
-};
-// console.log(quizQuestionTwo);
-
-var quizQuestionThree = {
-    askThree: "Arrays in JavaScript can be used to store _______.",
-    answersThree: [
-      "numbers and strings",
-      "other arrays",
-      "booleans",
-      "all of the above",
-    ],
-};
-// console.log(quizQuestionThree);
-
-var quizQuestionFour = {
-    askFour: "String values must be enclosed within _______ when being assigned to variables.",
-    answersFour: [
-      "commas",
-      "curly brackets",
-      "quotes",
-      "parenthesis",
-    ],
-};
-// console.log(quizQuestionFour);
-
-var quizQuestionFive = {
-    askFive: "A very useful tool during development and debugging for printing content to the debugger is:",
-    answersFive: [
-      "JavaScript",
-      "terminal/zsh",
-      "for loops",
-      "console.log",
-    ],
-};
-
-var finalScore = userScore;
-// console.log(finalScore);
-
-var questionSlidesArray = [quizQuestionOne, quizQuestionTwo, quizQuestionThree, quizQuestionFour, quizQuestionFive];
-console.log(questionSlidesArray);
+var timerNumber = document.getElementById("timer-number");
+var startQuizBtn = document.getElementById("start-quiz-btn");
+var count = 100;
 
 // Write password to the #password input
 function startQuiz() {
-  for (i = 0; i <= questionSlidesArray.length; i++) {
-
-  }
+  
 }
 
-// Add event listener to generate button
-startQuizBtn.addEventListener("click", startQuiz);
+// Add event listener to button that starts timer:
+startQuizBtn.addEventListener("click", function() {
+startQuizBtn = setInterval(function() {
+    count -= 1;
+    timerNumber.textContent = count;
+    if (count <= 0) {
+    clearInterval(startQuizBtn);
+    }
+  }, 1000);
+});
+
+
+
+
+
+
+
+
+
+// variable objects containing quiz questions and possible answers:
+// var quizQuestionOne = {
+//     askOne: "Commonly used data types DO not include:",
+//     answersOne: [
+//       "strings",
+//       "booleans",
+//       "alerts",
+//       "numbers",
+//     ],
+// };
+// console.log(quizQuestionOne);
+
+// var quizQuestionTwo = {
+//     askTwo: "The condition in an if / else statement is enclosed with _______.",
+//     answersTwo: [
+//       "quotes",
+//       "curly brackets",
+//       "parenthesis",
+//       "square brackets",
+//     ],
+// };
+// console.log(quizQuestionTwo);
+
+// var quizQuestionThree = {
+//     askThree: "Arrays in JavaScript can be used to store _______.",
+//     answersThree: [
+//       "numbers and strings",
+//       "other arrays",
+//       "booleans",
+//       "all of the above",
+//     ],
+// };
+// console.log(quizQuestionThree);
+
+// var quizQuestionFour = {
+//     askFour: "String values must be enclosed within _______ when being assigned to variables.",
+//     answersFour: [
+//       "commas",
+//       "curly brackets",
+//       "quotes",
+//       "parenthesis",
+//     ],
+// };
+// console.log(quizQuestionFour);
+
+// var quizQuestionFive = {
+//     askFive: "A very useful tool during development and debugging for printing content to the debugger is:",
+//     answersFive: [
+//       "JavaScript",
+//       "terminal/zsh",
+//       "for loops",
+//       "console.log",
+//     ],
+// };
+
+// var finalScore = userScore;
+// console.log(finalScore);
+
+// var questionSlidesArray = [quizQuestionOne, quizQuestionTwo, quizQuestionThree, quizQuestionFour, quizQuestionFive];
+// console.log(questionSlidesArray);
