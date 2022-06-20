@@ -12,17 +12,22 @@
 // THEN I can save my initials and score
 
 var userScore = 0;
-var timer = 100000;
-var startQuizBtn = document.querySelector("#start-quiz");
+var timerNumber = document.getElementById("timer-number");
+var startQuizBtn = document.getElementById("start-quiz-btn");
+var count = 5;
+var heading1 = document.getElementById("slide-titles");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
 
-}
+// Add event listener to button that starts timer:
+startQuizBtn.addEventListener("click", function() {
+  // startQuizBtn.style.display = "none";
+  startQuizBtn = setInterval(function() {
+      count -= 1;
+      timerNumber.textContent = count;
+        if (count <= 0) {
+      clearInterval(startQuizBtn);
+        }
+    }, 1000);
+  });
 
-// Add event listener to generate button
-startQuizBtn.addEventListener("click", writePassword);

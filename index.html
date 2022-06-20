@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,26 +8,148 @@
   <title>Git Quizzy</title>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-  
-  <div class="wrapper">
-    <header>
-      <a href="#"><p>View high scores</p></a>
-      <h1 class="git-quizzy-heading">Git-Quizzy</h1>
-      <h3 class="timeLeft">Time: 0</h3>
+  <div class="main-container" id="top-main-container">
+    <header id="navigation">
+      <a href="#">
+        <p>View high scores</p>
+      </a>
+
+      <h1 class="git-quizzy-heading"><span id="git">git</span>Quizzy</h1>
+
+      <h3 id="timer-text">Timer: <span id="timer-number" data>5</span></h3>
     </header>
-    <main class="slideContent">
-      <h1 class="slide-titles">Javascript Coding Quiz Challenge</h1>
-      <p>Try to answer the following code-related questions within the time limit.
-      <br>Keep in mind that incorrect answers will penalize your score/time by ten seconds!
-      </p>
-      <div id="buttons">
-        <button id="start-quiz" class="btn">Start Quiz</button>
-      </div>
-    </main>
+
+    <div class="wrapper">
+      <main class="slide-content" id="slide-content">
+        <h1 id="slide-titles">Javascript Coding Quiz Challenge</h1>
+        <p id="intro-paragraph">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score / time by ten seconds!</p>
+        
+        <a href="#section-one"><button id="start-quiz-btn">Start Quiz</button></a>
+
+
+        <section class="section-one" id="section-one">
+        <h1 id="quiz-titles">Commonly used data types DO NOT include:</h1>
+        <ul id="choice-buttons-one">
+          <a href="#section-two">
+            <li class="one-btn-1">strings</li>
+          </a>
+          <a href="#section-two">
+            <li class="one-btn-2">booleans</li>
+          </a>
+          <a href="#section-two">
+            <li class="one-btn-3">alerts</li>
+          </a>
+          <a href="#section-two">
+            <li class="one-btn-4">numbers</li>
+          </a>
+        </ul>
+        </section>
+
+        <section class="section-two" id="section-two">
+        <h1 id="quiz-titles">The condition in an if / else statement is enclosed with _______.</h1>
+        <ul id="choice-buttons-two">
+          <a href="#section-three">
+            <li class="one-btn-5">quotes</li>
+          </a>
+          <a href="#section-three">
+            <li class="one-btn-6">curly brackets</li>
+          </a>
+          <a href="#section-three">
+            <li class="one-btn-7">parenthesis</li>
+          </a>
+          <a href="#section-three">
+            <li class="one-btn-8">square brackets</li>
+          </a>
+        </ul>
+        </section>
+
+        <section class="section-three" id="section-three">
+        <h1 id="quiz-titles">Arrays in JavaScript can be used to store _______.</h1>
+        <ul id="choice-buttons-three">
+          <a href="#section-four">
+            <li class="one-btn-9">numbers and strings</li>
+          </a>
+          <a href="#section-four">
+            <li class="one-btn-10">other arrays</li>
+          </a>
+          <a href="#section-four">
+            <li class="one-btn-11">booleans</li>
+          </a>
+          <a href="#section-four">
+            <li class="one-btn-12">all of the above</li>
+          </a>
+        </ul>
+        </section>
+
+        <section class="section-four" id="section-four">
+        <h1 id="quiz-titles">String values must be enclosed within _______ when being assigned to variables.</h1>
+        <ul id="choice-buttons-four">
+            <a href="#section-five">
+              <li class="one-btn-13">commas</li>
+            </a>
+            <a href="#section-five">
+              <li class="one-btn-14">curly brackets</li>
+            </a>
+            <a href="#section-five">
+              <li class="one-btn-15">quotes</li>
+            </a>
+            <a href="#section-five">
+              <li class="one-btn-16">parenthesis</li>
+            </a>
+        </ul>
+        </section>
+
+        <section class="section-five" id="section-five">
+        <h1 id="quiz-titles">A very useful tool during development and debugging for printing content to the debugger is:</h1>
+        <ul id="choice-buttons-five">
+          <a href="#section-six">
+            <li class="one-btn-17">JavaScript</li>
+          </a>
+          <a href="#section-six">
+            <li class="one-btn-18">terminal/zsh</li>
+          </a>
+          <a href="#section-six">
+            <li class="one-btn-19">for loops</li>
+          </a>
+          <a href="#section-six">
+            <li class="one-btn-20">console.log</li>
+          </a>
+        </ul>
+        </section>
+
+        <section class="section-six" id="section-six">
+          <div id="section-six-space"></div>
+          <h1 id="quiz-titles">All done!</h1>
+          <p id="your-final-score">Your final score is <span id="score-number" data>0</span>
+          <div class="enter-initials">
+            <form action="post" method="post" id="your-initials">
+              <p id="p-text-for-initials" class="para-initials">Enter initials:</p>
+              <input type="text" id="characters-for-initials" name="initials">
+            </form>
+            <a href="#section-seven"><button id="submit-initials">Submit</button></a>
+          </div>
+          </section>
+
+        <section class="section-seven" id="section-seven">
+          <div id="section-seven-space"></div>
+          <h1 id="quiz-titles">High scores</h1>
+          <div class="high-scores">
+            <p id="high-score-and-initials">1. </p>
+            <div id="btn-group">
+              <a href="#top-main-container"><button id="go-back">Go back</button></a>
+              <a href="#top-main-container"><button id="clear-scores">Clear high scores</button></a>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
   </div>
-  
+
 
   <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
