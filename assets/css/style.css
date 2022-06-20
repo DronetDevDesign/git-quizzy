@@ -1,11 +1,21 @@
 :root {
-    --background: #f7f7f7;
-    --pale-purple: #a168fc;
-    --lt-purple: #6935eb;
-    --med-purple: #4e28ae;
-    --drk-purple: #351c75;
-    --drk-gray: #181818;
-    --red-timer-button: #e00000;
+  --background: #f7f7f7;
+  --lighter-pale-purple: #d7bdff;
+  --pale-purple: #a168fc;
+  --lt-purple: #6935eb;
+  --med-purple: #4e28ae;
+  --drk-purple: #351c75;
+  --drk-gray: #181818;
+  --red-timer-button: #e00000;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--background);
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--background);
 }
 
 *,
@@ -24,7 +34,6 @@ body {
   font-family: sans-serif;
   background-color: var(--background);
   overscroll-behavior: none;
-  /* overflow: hidden; */
 }
 
 a {
@@ -34,12 +43,16 @@ a {
 .main-container {
   max-width: 70%;
   margin: auto;
-  justify-content:center;
+  padding-bottom: 400px;
+  justify-content: center;
   top: 0;
 }
 
+.main-container::-webkit-scrollbar {
+  display: none;
+}
+
 header {
-  width: 65%;
   background-color: var(--background);
   position: -webkit-sticky;
   position: sticky;
@@ -52,7 +65,6 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  color: hsl(206, 17%, 28%);
   z-index: 1000;
 }
 
@@ -61,7 +73,7 @@ header {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
-  max-width: 65%;
+  max-width: 1400px;
   margin: auto;
   display: block;
   /* text-align: center; */
@@ -91,7 +103,7 @@ header {
   -moz-text-fill-color: transparent;
 }
 
-header a > p {
+header a>p {
   font-size: 16px;
   font-weight: bold;
   color: var(--pale-purple);
@@ -157,18 +169,14 @@ ul #start-quiz li {
   background-image: linear-gradient(var(--pale-purple), var(--drk-purple));
 }
 
-#section {
-  margin: 100px 25px;
-}
-
 #quiz-titles {
   position: relative;
   font-size: 36px;
   color: var(--drk-purple);
   letter-spacing: 0.1px;
   text-align: left;
-  line-height: 1.2;
-  margin-bottom: 20px;
+  line-height: 1.3;
+  margin-bottom: 15px;
 }
 
 #choice-buttons-one a {
@@ -201,20 +209,245 @@ ul #start-quiz li {
   background-image: linear-gradient(var(--pale-purple), var(--drk-purple));
 }
 
-/* @media (max-width: 690px) {
-  .btn {
-    font-size: 1rem;
-    margin: 16px 0px 0px 0px;
-    padding: 10px 15px;
+#your-final-score {
+  text-align: left;
+  margin: 0;
+  align-items: center;
+}
+
+.enter-initials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#p-text-for-initials {
+  margin-right: 0;
+}
+
+form input[type="text"] {
+  width: 300px;
+}
+
+.para-initials {
+  margin-right: 5px;
+  display: inline;
+}
+
+#submit-initials {
+  position: relative;
+  top: 3px;
+  margin-left: 7px;
+}
+
+#quiz-titles {
+  text-align: left;
+  margin: 0;
+  align-items: center;
+}
+
+#high-score-and-initials {
+  text-align: left;
+  background-color: var(--lighter-pale-purple);
+  padding: 5px 10px;
+  width: 500px;
+  margin-top: 10px;
+  margin-bottom: 13px;
+}
+
+#btn-group {
+  justify-content: left;
+  text-align: left;
+}
+
+#submit-initials,
+#go-back,
+#clear-scores {
+  background-color: var(--drk-purple);
+  color: var(--background);
+  border-radius: 3px;
+  padding: 3px 8px;
+  border: none;
+}
+
+#submit-initials:hover,
+#go-back:hover,
+#clear-scores:hover {
+  background-image: linear-gradient(var(--pale-purple), var(--drk-purple));
+  cursor: pointer;
+}
+
+#clear-scores {
+  margin-left: 8px;
+}
+
+
+#section-one,
+#section-two,
+#section-three,
+#section-four,
+#section-five,
+#section-six,
+#section-seven {
+  margin: 400px 25px;
+}
+
+#section-one,
+#section-two,
+#section-three,
+#section-four,
+#section-five {
+  position: relative;
+  padding-top: 300px;
+  /* padding-bottom:200px */
+  /* top: 300px; */
+}
+
+#section-six-space {
+  width: 600px;
+  height: 350px;
+  background-color: var(--background);
+}
+
+#section-six {
+  position: relative;
+  align-content: center;
+  margin-top: 800px;
+}
+
+#section-seven-space {
+  width: 600px;
+  height: 350px;
+  background-color: var(--background);
+}
+
+#btn-group {
+  margin-bottom: 400px;
+}
+
+@media (max-width: 690px) {
+  .main-container {
+    width: 690px;
+    margin: 0;
+    align-items: center;
   }
 
-  #password {
-    font-size: 1rem;
+  header {
+    width: 690px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 65px;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 35px;
   }
+  
+  .git-quizzy-heading {
+    font-size: 60px;
+  }
+
+  header #timer-text {
+    min-width: 100px;
+    height: 30px;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  main {
+    max-width: 690px;
+  }
+
+  #slide-content {
+    width: 600px;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  main #slide-titles {
+    font-size: 32px;
+  }
+  
+#quiz-titles {
+  position: relative;
+  font-size: 32px;
+  color: var(--drk-purple);
+  letter-spacing: 0.1px;
+  text-align: left;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+    
 }
 
 @media (max-width: 500px) {
-  .btn {
-    font-size: 0.8rem;
+
+.main-container {
+  width: 500px;
+  margin: 0;
+  align-items: center;
+}
+  
+header {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 65px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
   }
-}  */
+  
+  .git-quizzy-heading {
+  font-size: 52px;
+  margin-left: 15px;
+  }
+
+  header a >p {
+    font-size: 12px;
+  }
+  
+  header #timer-text {
+  position: relative;
+  min-width: 98px;
+  height: 25px;
+  padding: 6px 15px;
+  font-size: 11px;
+  top: -25px;
+  }
+  
+  main {
+  max-width: 500px;
+  }
+  
+  #slide-content {
+  width: 430px;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  }
+  
+  main #slide-titles {
+  font-size: 32px;
+  }
+
+.enter-initials {
+  display: block;
+  align-items: center;
+  text-align: left;
+  }
+
+  #submit-initials {
+  position: relative;
+  top: 3px;
+  margin-left: 0;
+  }
+
+#high-score-and-initials {
+  width: 300px;
+}
+
+
+} 
