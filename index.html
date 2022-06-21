@@ -12,13 +12,13 @@
 <body>
   <div class="main-container" id="top-main-container">
     <header id="navigation">
-      <a href="#">
+      <a href="#section-seven">
         <p>View high scores</p>
       </a>
 
       <h1 class="git-quizzy-heading"><span id="git">git</span>Quizzy</h1>
 
-      <h3 id="timer-text">Timer: <span id="timer-number" data>5</span></h3>
+      <h3 id="timer-text">Timer: <span id="timer-number" data>100</span></h3>
     </header>
 
     <div class="wrapper">
@@ -33,16 +33,16 @@
         <h1 id="quiz-titles">Commonly used data types DO NOT include:</h1>
         <ul id="choice-buttons-one">
           <a href="#section-two">
-            <li class="one-btn-1">strings</li>
+            <li id="one-btn-1">strings</li>
           </a>
           <a href="#section-two">
-            <li class="one-btn-2">booleans</li>
+            <li id="one-btn-2">booleans</li>
           </a>
           <a href="#section-two">
-            <li class="one-btn-3">alerts</li>
+            <li id="one-btn-3">alerts</li>
           </a>
           <a href="#section-two">
-            <li class="one-btn-4">numbers</li>
+            <li id="one-btn-4">numbers</li>
           </a>
         </ul>
         </section>
@@ -51,16 +51,16 @@
         <h1 id="quiz-titles">The condition in an if / else statement is enclosed with _______.</h1>
         <ul id="choice-buttons-two">
           <a href="#section-three">
-            <li class="one-btn-5">quotes</li>
+            <li id="two-btn-5">quotes</li>
           </a>
           <a href="#section-three">
-            <li class="one-btn-6">curly brackets</li>
+            <li id="two-btn-6">curly brackets</li>
           </a>
           <a href="#section-three">
-            <li class="one-btn-7">parenthesis</li>
+            <li id="two-btn-7">parenthesis</li>
           </a>
           <a href="#section-three">
-            <li class="one-btn-8">square brackets</li>
+            <li id="two-btn-8">square brackets</li>
           </a>
         </ul>
         </section>
@@ -69,16 +69,16 @@
         <h1 id="quiz-titles">Arrays in JavaScript can be used to store _______.</h1>
         <ul id="choice-buttons-three">
           <a href="#section-four">
-            <li class="one-btn-9">numbers and strings</li>
+            <li id="three-btn-9">numbers and strings</li>
           </a>
           <a href="#section-four">
-            <li class="one-btn-10">other arrays</li>
+            <li id="three-btn-10">other arrays</li>
           </a>
           <a href="#section-four">
-            <li class="one-btn-11">booleans</li>
+            <li id="three-btn-11">booleans</li>
           </a>
           <a href="#section-four">
-            <li class="one-btn-12">all of the above</li>
+            <li id="three-btn-12">all of the above</li>
           </a>
         </ul>
         </section>
@@ -87,16 +87,16 @@
         <h1 id="quiz-titles">String values must be enclosed within _______ when being assigned to variables.</h1>
         <ul id="choice-buttons-four">
             <a href="#section-five">
-              <li class="one-btn-13">commas</li>
+              <li id="four-btn-13">commas</li>
             </a>
             <a href="#section-five">
-              <li class="one-btn-14">curly brackets</li>
+              <li id="four-btn-14">curly brackets</li>
             </a>
             <a href="#section-five">
-              <li class="one-btn-15">quotes</li>
+              <li id="four-btn-15">quotes</li>
             </a>
             <a href="#section-five">
-              <li class="one-btn-16">parenthesis</li>
+              <li id="four-btn-16">parenthesis</li>
             </a>
         </ul>
         </section>
@@ -105,16 +105,16 @@
         <h1 id="quiz-titles">A very useful tool during development and debugging for printing content to the debugger is:</h1>
         <ul id="choice-buttons-five">
           <a href="#section-six">
-            <li class="one-btn-17">JavaScript</li>
+            <li id="five-btn-17">JavaScript</li>
           </a>
           <a href="#section-six">
-            <li class="one-btn-18">terminal/zsh</li>
+            <li id="five-btn-18">terminal/zsh</li>
           </a>
           <a href="#section-six">
-            <li class="one-btn-19">for loops</li>
+            <li id="five-btn-19">for loops</li>
           </a>
           <a href="#section-six">
-            <li class="one-btn-20">console.log</li>
+            <li id="five-btn-20">console.log</li>
           </a>
         </ul>
         </section>
@@ -122,11 +122,11 @@
         <section class="section-six" id="section-six">
           <div id="section-six-space"></div>
           <h1 id="quiz-titles">All done!</h1>
-          <p id="your-final-score">Your final score is <span id="score-number" data>0</span>
+          <p id="your-final-score">Your final score is <span id="score-number" data=""></span>
           <div class="enter-initials">
             <form action="post" method="post" id="your-initials">
               <p id="p-text-for-initials" class="para-initials">Enter initials:</p>
-              <input type="text" id="characters-for-initials" name="initials">
+              <input type="text" id="characters-for-initials" name="initials" data="">
             </form>
             <a href="#section-seven"><button id="submit-initials">Submit</button></a>
           </div>
@@ -138,7 +138,7 @@
           <div class="high-scores">
             <p id="high-score-and-initials">1. </p>
             <div id="btn-group">
-              <a href="#top-main-container"><button id="go-back">Go back</button></a>
+              <a href="#top-main-container"><button id="go-back-to-top">Go back</button></a>
               <a href="#top-main-container"><button id="clear-scores">Clear high scores</button></a>
             </div>
           </div>

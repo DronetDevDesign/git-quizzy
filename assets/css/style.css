@@ -261,7 +261,7 @@ form input[type="text"] {
 }
 
 #submit-initials,
-#go-back,
+#go-back-to-top,
 #clear-scores {
   background-color: var(--drk-purple);
   color: var(--background);
@@ -271,7 +271,7 @@ form input[type="text"] {
 }
 
 #submit-initials:hover,
-#go-back:hover,
+#go-back-to-top:hover,
 #clear-scores:hover {
   background-image: linear-gradient(var(--pale-purple), var(--drk-purple));
   cursor: pointer;
