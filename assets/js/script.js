@@ -57,131 +57,159 @@ startQuizBtn.addEventListener("click", function() {
       timerNumber.textContent = count;
         if (count <= 0) {
       clearInterval(startQuizBtn);
-        }
+      }
     }, 1000);
   });
+
+  function displayScore(num) {
+    scoreCount === scoreCount + 10;
+    if (scoreCount) {
+      scoreCount = scoreCount + finalScore; 
+    } else {
+      !scoreCount;
+    };
+  };
 
 // section one buttons:
 btn1.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
 
 btn2.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
-
+// correct answer
 btn3.addEventListener("click", function() {
   scoreCount = finalScore;
-  scoreCount = 10;
+  scoreCount = scoreCount + 10;
   console.log(scoreCount);
 });
 
 btn4.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
 
 // section two buttons:
 btn5.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
 
 btn6.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
-
+// correct answer
 btn7.addEventListener("click", function() {
   scoreCount = finalScore;
-  scoreCount = 10;
+  scoreCount = scoreCount + 10;
   console.log(scoreCount);
 });
 
 btn8.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
 
 // section three buttons:
 btn9.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
 
 btn10.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
 
 btn11.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
-
+// correct answer
 btn12.addEventListener("click", function() {
   scoreCount = finalScore;
-  scoreCount = 10;
+  scoreCount = scoreCount + 10;
   console.log(scoreCount);
 });
 
 // section four buttons:
 btn13.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
 
 btn14.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
-
+// correct answer
 btn15.addEventListener("click", function() {
   scoreCount = finalScore;
-  scoreCount = 10;
+  scoreCount = scoreCount + 10;
   console.log(scoreCount);
+
 });
 
 btn16.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
 
 // section five buttons:
 btn17.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
 
 btn18.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
 
 btn19.addEventListener("click", function() {
   count = count -10;
+  alert("WRONG ANSWER!");
 });
-
+// correct answer
 btn20.addEventListener("click", function() {
   scoreCount = finalScore;
-  scoreCount = 10;
+  scoreCount = scoreCount + 10;
+  displayScore(parseInt(document.getElementById("score-number").innerHTML, 10));
   console.log(scoreCount);
   return finalScore;
 });
 
 
-
 // section six input field:
-enterYourInitials.addEventListener("click", function() {
+// enterYourInitials.addEventListener("click", function() {
 
-});
-
-// submitInitialsBtn.addEventListener("click", function() {
-//   var newSubmitInitialsBtn = document.getElementById("submit-initials").value;
-//   if(localStorage.getItem("data") === null) {
-//     localStorage.setItem("data", "[]");
-//   };
-
-//   submitInitialsBtn = JSON.parse(localStorage.getItem('data'));
-//   submitInitialsBtn.push(newSubmitInitialsBtn);
-//   localStorage.setItem("data", JSON.stringify(submitInitialsBtn));
 // });
 
-// section seven buttons:
-goBackBtn.addEventListener("click", function() {
+submitInitialsBtn.addEventListener("click", function() {
+  var newSubmitInitialsBtn = document.getElementById("submit-initials").value;
+  if(localStorage.getItem("data") === null) {
+    localStorage.setItem("data", "[]");
+  };
 
+  submitInitialsBtn = JSON.parse(localStorage.getItem('data'));
+  submitInitialsBtn.push(newSubmitInitialsBtn);
+  localStorage.setItem("data", JSON.stringify(submitInitialsBtn));
+});
+
+// section seven buttons ---
+// go back and reload page:
+goBackBtn.addEventListener("click", function() {
+  location.reload();
+  return false;
 });
 
 clearScoresBtn.addEventListener("click", function() {
-
+  location.reload();
+  return false;
 });
 
 

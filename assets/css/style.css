@@ -76,7 +76,6 @@ header {
   max-width: 1400px;
   margin: auto;
   display: block;
-  /* text-align: center; */
 }
 
 .git-quizzy-heading {
@@ -299,8 +298,6 @@ form input[type="text"] {
 #section-five {
   position: relative;
   padding-top: 300px;
-  /* padding-bottom:200px */
-  /* top: 300px; */
 }
 
 #section-six-space {
@@ -324,6 +321,8 @@ form input[type="text"] {
 #btn-group {
   margin-bottom: 400px;
 }
+
+/* MEDIA QUERIES: 690px: */
 
 @media (max-width: 690px) {
   .main-container {
@@ -380,6 +379,9 @@ form input[type="text"] {
   }
 
 }
+
+
+/* MEDIA QUERIES: 500px: */
 
 @media (max-width: 500px) {
 

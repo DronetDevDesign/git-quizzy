@@ -1,14 +1,21 @@
-# git-quizzy
-A fun JavaScript coding quiz game! Let's Git Quizzy!
+# gitQuizzy
+## A fun JavaScript coding quiz game! Let's gitQuizzy!
 
 ## Purpose:
-Nothing yet!
+Test your knowledge of JavaScript by playing this short quiz game. Try not to get a WRONG ANSWER alert!
+Good luck!
 
 <br>
 <div align="left">
     <img src="./assets/images/git-quizzy-screenshot.jpg" width="800px" /> 
 </div>
 <br>
+
+## Viewable Responsive Screen Sizes:
+* Desktop: 1400px
+* Media Query Sizes:
+  - 690px (Tablets)
+  - 500px (Small devices - large cell phones)
 
 ## Website Link:
 https://dronetdevdesign.github.io/git-quizzy/
@@ -20,21 +27,3 @@ https://dronetdevdesign.github.io/git-quizzy/
 
 ## Contribution:
 Ron Dronet - Full-stack Developer and Graphic Designer
-
-## User story:
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-
-## Acceptance criteria:
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
