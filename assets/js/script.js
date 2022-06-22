@@ -35,8 +35,6 @@ var submitInitialsBtn = document.getElementById("submit-initials");
 var goBackBtn = document.getElementById("go-back-to-top");
 var clearScoresBtn = document.getElementById("clear-scores");
 
-
-
 // Add event listener to button that starts timer:
 startQuizBtn.addEventListener("click", function() {
   startQuizBtn = setInterval(function() {
